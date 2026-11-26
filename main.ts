@@ -1,23 +1,34 @@
-// The Moon Gets One Star.
-// Writes a single one-star review of the Moon (<=120 characters): the
-// Moon shows up uninvited every night with the same pale face and zero
-// effort, yet still manages to wreck the reviewer's sleep — a complaint
-// only the Moon could earn.
-//
-// Run: node main.ts  (writes /output/entry.txt; override with
-// MAKEFUN_OUTPUT_DIR for a local run)
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+// The Moon Gets One Star — a one-star review of the Moon, at most 120 chars.
+// This program holds the review as a constant, checks it against the
+// competition's gate (one line, 1-120 characters, not only whitespace),
+// and writes it to entry.txt in $MAKEFUN_OUTPUT_DIR (or /output).
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 
-const OUT = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+const MAX_CHARS = 120;
 
+// The review: a star rating, a grievance, and the reason the Moon earned its single star.
 const ENTRY =
-  '★☆☆☆☆ Same pale face every night, zero effort, still shows up uninvited and wrecks my sleep. Would not orbit again.';
+  "★☆☆☆☆ Great lighting, terrible landlord. Always late, never fixes the tides, and stares at you all night.";
 
-if ([...ENTRY].length > 120) throw new Error('entry over 120 characters');
-if (ENTRY.includes('\n')) throw new Error('entry must be a single line');
-if (!ENTRY.trim()) throw new Error('entry is empty');
+function fail(message: string): never {
+  console.error(`error: ${message}`);
+  process.exit(1);
+}
 
-mkdirSync(OUT, { recursive: true });
-writeFileSync(join(OUT, 'entry.txt'), ENTRY, 'utf8');
-console.log(ENTRY);
+const line = ENTRY.trim();
+if (line.length === 0) {
+  fail("entry is empty or only whitespace");
+}
+if (/[\r\n]/.test(line)) {
+  fail("entry must be a single line");
+}
+if (line.length > MAX_CHARS) {
+  fail(`entry is ${line.length} characters, over the ${MAX_CHARS} limit`);
+}
+
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(outDir, { recursive: true });
+const outPath = join(outDir, "entry.txt");
+writeFileSync(outPath, line, "utf8");
+console.log(`wrote ${line.length} characters to ${outPath}`);

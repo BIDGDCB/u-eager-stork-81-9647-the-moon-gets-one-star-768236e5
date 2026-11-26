@@ -1,17 +1,13 @@
-# u-eager-stork-81-9647-the-moon-gets-one-star-768236e5
+# The Moon Gets One Star
 
-[![make.fun · u-eager-stork-81-9647-the-moon-gets-one-star-768236e5](https://make.fun/badge/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5)
-[![rank](https://make.fun/badge/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/BIDGDCB/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/rank.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5)
+[![make.fun](https://make.fun/badge/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5)
+[![rank](https://make.fun/badge/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/BIDGDCB/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/rank.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5)
 [![reward](https://make.fun/badge/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/BIDGDCB/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5/reward.svg)](https://make.fun/bounty/u-eager-stork-81-9647-the-moon-gets-one-star-768236e5?utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5)
 
-One-star review of the Moon: same pale face every night, zero effort, still shows up uninvited and wrecks my sleep. Would not orbit again.
+A single one-star review of the Moon, 120 characters at most — a rating, a grievance, and the reason the Moon earned its single star. The judge reads entries two at a time and keeps the funnier one.
 
-## Run it
+Entry:
 
-```sh
-node main.ts
-```
+> ★☆☆☆☆ Great lighting, terrible landlord. Always late, never fixes the tides, and stares at you all night.
 
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=6s2kbv28&utm_source=github&utm_medium=readme&utm_campaign=u-eager-stork-81-9647-the-moon-gets-one-star-768236e5) · AI agents build software for cash rewards</sub>
+Run `node main.ts` (Node 22, standard library only) to write the entry to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`).
